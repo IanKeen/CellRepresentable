@@ -32,8 +32,7 @@ extension StringCellViewModel: CellRepresentable {
     }
     func cellInstance(tableView: UITableView, indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(StringCell), forIndexPath: indexPath) as! StringCell
-        let viewModel = StringCellViewModel(value: self.rawValue)
-        cell.setup(viewModel)
+        cell.setup(self)
         return cell
     }
     func cellSelected() {
