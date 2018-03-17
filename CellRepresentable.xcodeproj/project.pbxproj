@@ -28,6 +28,7 @@
 		320307AF1CBAB8920059991C /* StringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320307AD1CBAB8920059991C /* StringViewController.swift */; };
 		320307B01CBAB8920059991C /* StringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320307AE1CBAB8920059991C /* StringViewController.xib */; };
 		320307B21CBAB8E50059991C /* StringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320307B11CBAB8E50059991C /* StringViewModel.swift */; };
+		85220F38205D3FA200CB5DE1 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85220F37205D3FA200CB5DE1 /* UITableView+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		320307AD1CBAB8920059991C /* StringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringViewController.swift; sourceTree = "<group>"; };
 		320307AE1CBAB8920059991C /* StringViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StringViewController.xib; sourceTree = "<group>"; };
 		320307B11CBAB8E50059991C /* StringViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringViewModel.swift; sourceTree = "<group>"; };
+		85220F37205D3FA200CB5DE1 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				320307721CB854F70059991C /* Assets.xcassets */,
 				320307741CB854F70059991C /* LaunchScreen.storyboard */,
 				320307771CB854F70059991C /* Info.plist */,
+				85220F37205D3FA200CB5DE1 /* UITableView+Reusable.swift */,
 			);
 			path = CellRepresentable;
 			sourceTree = "<group>";
@@ -219,7 +222,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Mustard;
 				TargetAttributes = {
 					320307671CB854F70059991C = {
@@ -277,6 +280,7 @@
 				320307B21CBAB8E50059991C /* StringViewModel.swift in Sources */,
 				320307A41CB885C90059991C /* NavigationCoordinator.swift in Sources */,
 				320307931CB8654B0059991C /* StringCell.swift in Sources */,
+				85220F38205D3FA200CB5DE1 /* UITableView+Reusable.swift in Sources */,
 				320307971CB8668B0059991C /* IntCell.swift in Sources */,
 				320307881CB855C90059991C /* CellRepresentable.swift in Sources */,
 				320307831CB8558C0059991C /* HomeViewController.swift in Sources */,
@@ -306,13 +310,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -350,13 +362,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -383,11 +403,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CellRepresentable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.CellRepresentable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -395,11 +417,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CellRepresentable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.CellRepresentable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -422,6 +446,7 @@
 				3203077C1CB854F70059991C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

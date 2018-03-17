@@ -10,6 +10,6 @@ import UIKit
 
 protocol CellRepresentable {
     static func registerCell(tableView: UITableView)
-    func cellInstance(tableView: UITableView, indexPath: NSIndexPath) -> UITableViewCell
+    func cellInstance(in tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell
     func cellSelected()
 }

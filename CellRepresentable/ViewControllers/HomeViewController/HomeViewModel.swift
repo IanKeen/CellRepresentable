@@ -32,9 +32,9 @@ extension HomeViewModel {
             let rand = random(min: 0, max: 1)
             
             if (rand == 0) {
-                return self.stringCellViewModel(value)
+                return self.stringCellViewModel(value: value)
             } else {
-                return self.intCellViewModel(value)
+                return self.intCellViewModel(value: value)
             }
         }
     }

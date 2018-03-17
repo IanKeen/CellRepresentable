@@ -8,7 +8,9 @@
 
 import UIKit
 
-class StringCell: UITableViewCell {
+class StringCell: UITableViewCell, Reusable {
+    static let reuseIdentifier = "StringCell"
+    
     //MARK: - IBOutlets
     @IBOutlet private var valueLabel: UILabel!
     
