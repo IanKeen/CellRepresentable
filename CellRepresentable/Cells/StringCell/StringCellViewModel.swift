@@ -28,11 +28,11 @@ class StringCellViewModel {
 //MARK: - CellRepresentable
 extension StringCellViewModel: CellRepresentable {
     static func registerCell(tableView: UITableView) {
-        tableView.registerNib(UINib(nibName: String(StringCell), bundle: nil), forCellReuseIdentifier: String(StringCell))
+        tableView.register(StringCell.self)
     }
-    func cellInstance(tableView: UITableView, indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(StringCell), forIndexPath: indexPath) as! StringCell
-        cell.setup(self)
+    func cellInstance(in tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {        
+        let cell: StringCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.setup(viewModel: self)
         return cell
     }
     func cellSelected() {
